@@ -1,14 +1,13 @@
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Registro from './components/views/Registro';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Menu from "./components/common/Menu";
 
 function App() {
-
   return (
     <>
-    <h2>Hola mundo</h2>
+      <Menu></Menu>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

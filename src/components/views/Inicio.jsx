@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import Menu from "../common/Menu";
 
 const Inicio = () => {
-    return (
-        <div>
-            inicio
-        </div>
-    );
+  return (
+    <>
+      <Menu></Menu>
+    </>
+  );
 };
 
 export default Inicio;
