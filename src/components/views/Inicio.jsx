@@ -1,12 +1,8 @@
 import React from "react";
-import Menu from "../common/Menu";
+import { Container } from "react-bootstrap";
 
 const Inicio = () => {
-  return (
-    <>
-      <Menu></Menu>
-    </>
-  );
+  return <Container className="mainSection"></Container>;
 };
 
 export default Inicio;
