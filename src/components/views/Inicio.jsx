@@ -4,6 +4,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 const Inicio = () => {
   return (
     <>
+      {/* Banner Principal */}
       <Container
         fluid
         className="mainSection banner d-flex justify-content-center align-items-center"
@@ -12,6 +13,7 @@ const Inicio = () => {
           Bienvenidos a envasesMB
         </h1>
       </Container>
+      {/* Seccion Nuestros productos */}
       <Container>
         <div className="shadow text-center py-5 border-3 my-5">
           <h2 class="">Nuestros productos</h2>
@@ -22,8 +24,12 @@ const Inicio = () => {
             Contamos con diversa variedad de productos en Envases MB
           </p>
           <div>
-            <Button variant="success" className="mx-2">Consultanos</Button>
-            <Button variant="outline-success" className="mx-2">Sobre Nosotros</Button>
+            <Button variant="success" className="mx-2">
+              Consultanos
+            </Button>
+            <Button variant="outline-success" className="mx-2">
+              Sobre Nosotros
+            </Button>
           </div>
         </div>
       </Container>
