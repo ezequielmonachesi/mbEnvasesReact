@@ -17,7 +17,7 @@ function Menu() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse>
-          <Nav className="text-center ms-auto my-2 my-lg-0">
+          <Nav className="text-center text-md-start ms-auto my-2 my-lg-0">
             <Nav.Link href="#action1">Inicio</Nav.Link>
             <Nav.Link href="#action2">Productos</Nav.Link>
             <Nav.Link href="#action2">Contacto</Nav.Link>

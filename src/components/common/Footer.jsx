@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="bg-body-tertiary border-top border-success border-opacity-75">
         <Container className="main py-5 text-dark">
           <Row>
-            <Col>
+            <Col  md={3}>
               <h6 className="text-uppercase">Contactanos</h6>
               <ul className="list-unstyled">
                 <li>3876423276 - Metán</li>
@@ -18,32 +18,32 @@ const Footer = () => {
                 <li>3876669121 - WhatsApp - Rosario de la Frontera</li>
               </ul>
             </Col>
-            <Col>
-              <h6 className="text-uppercase">Horarios de atención</h6>
+            <Col  md={3}>
+              <h6 className="text-uppercase mt-sm-3 mt-md-0">Horarios de atención</h6>
               <ul className="list-unstyled">
-                <li>Lunes a Sabados 8:30 a 13:00hs y de 17:30 a 21:30hs</li>
+                <li>Lunes a Sabados 8:30 a 13:00hs <br /> y de 17:30 a 21:30hs</li>
               </ul>
             </Col>
-            <Col>
-              <h6 className="text-uppercase">Ayuda</h6>
+            <Col  md={3}>
+              <h6 className="text-uppercase mt-sm-3 mt-md-0">Ayuda</h6>
               <ul className="list-unstyled">
-                <li>
-                  <a href="#" className=" text-light">
-                    Contacto
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className=" text-light">
+                <li className="mt-2">
+                  <a href="#" className="text-dark">
                     Locales
                   </a>
                 </li>
+                <li className="mt-2">
+                  <a href="#" className="text-dark">
+                    Contacto
+                  </a>
+                </li>
               </ul>
             </Col>
-            <Col>
-              <h6 className="text-uppercase">Seguinos</h6>
+            <Col  md={3}>
+              <h6 className="text-uppercase mt-sm-3 mt-md-0">Seguinos</h6>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#" className=" text-light">
+                  <a href="#" className=" text-dark">
                     Facebook
                   </a>
                 </li>
