@@ -22,6 +22,7 @@ function Menu() {
             <Nav.Link href="#action2">Productos</Nav.Link>
             <Nav.Link href="#action2">Contacto</Nav.Link>
             <Nav.Link href="#">Sobre Nosotros</Nav.Link>
+            <Nav.Link href="#">Administrador</Nav.Link>
             <Nav.Link href="#">Iniciar Sesión</Nav.Link>
             <Form className="d-flex ms-2">
               <Form.Control
