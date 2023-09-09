@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container, Table } from "react-bootstrap";
+import { Button, Container, Form, Row, Table } from "react-bootstrap";
 
 const Administrador = () => {
   return (
@@ -8,6 +8,16 @@ const Administrador = () => {
         <div className="d-flex justify-content-between align-items-center mt-5">
           <h1 className="display-4 ">Productos disponibles</h1>
           <Button className="btn btn-success">Agregar</Button>
+        </div>
+        <div className="d-md-flex justify-content-end mt-3 mt-md-3">
+          <Form className="d-flex ms-2">
+            <Form.Control
+              type="search"
+              className="me-2"
+              aria-label="Search"
+              placeholder="Buscar producto"
+            />
+          </Form>
         </div>
         <hr />
         <Table responsive striped bordered hover>
@@ -29,8 +39,8 @@ const Administrador = () => {
               <td>imagen.jpg</td>
               <td>Plastico</td>
               <td>
-                <Button className="btn btn-danger mx-1">Borrar</Button>
-                <Button className="btn btn-success">Editar</Button>
+                <Button className="btn btn-danger me-md-2">Borrar</Button>
+                <Button className="btn btn-success mt-2 mt-md-0">Editar</Button>
               </td>
             </tr>
             <tr>
@@ -40,8 +50,8 @@ const Administrador = () => {
               <td>imagen2.jpg</td>
               <td>Plastico</td>
               <td>
-                <Button className="btn btn-danger mx-1">Borrar</Button>
-                <Button className="btn btn-success">Editar</Button>
+                <Button className="btn btn-danger me-md-2">Borrar</Button>
+                <Button className="btn btn-success mt-2 mt-md-0">Editar</Button>
               </td>
             </tr>
           </tbody>
