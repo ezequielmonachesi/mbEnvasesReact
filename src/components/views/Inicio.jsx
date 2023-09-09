@@ -4,6 +4,7 @@ import {
   BoxSeamFill,
   Check2Circle,
   HouseCheckFill,
+  PatchCheck,
   PeopleFill,
   RocketTakeoff,
 } from "react-bootstrap-icons";
@@ -103,14 +104,14 @@ const Inicio = () => {
       </Container>
       {/* ¿Que hacemos? */}
       <Container fluid className="bannerDos mt-5 py-5">
-        <Row className="mt-5 ">
-          <Col>
-            <h2>¿Qué hacemos?</h2>
-            <h5>
+        <Row className="gy-4">
+          <Col sm={12} className="text-center">
+            <h2>¿Qué hacemos? <PatchCheck className="text-warning opacity-75"></PatchCheck></h2>
+            <h5 className="text-success">
               Proveemos amplia gama de envases y de productos para embalajes.
             </h5>
           </Col>
-          <Col>
+          <Col sm={12} className="text-center">
             <ul className="list-unstyled">
               <li className="fs-5">
                 <Check2Circle className="text-success"></Check2Circle> Potes de
