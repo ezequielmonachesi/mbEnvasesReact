@@ -22,14 +22,28 @@ const Administrador = () => {
             </tr>
           </thead>
           <tbody>
-            <td>1</td>
-            <td>Vaso</td>
-            <td>$4000</td>
-            <td>imagen.jpg</td>
-            <td>Plastico</td>
-            <td>
-              <Button className="btn btn-danger">Borrar</Button>
-            </td>
+            <tr>
+              <td>1</td>
+              <td>Vaso</td>
+              <td>$4000</td>
+              <td>imagen.jpg</td>
+              <td>Plastico</td>
+              <td>
+                <Button className="btn btn-danger mx-1">Borrar</Button>
+                <Button className="btn btn-success">Editar</Button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Papel Film</td>
+              <td>$3000</td>
+              <td>imagen2.jpg</td>
+              <td>Plastico</td>
+              <td>
+                <Button className="btn btn-danger mx-1">Borrar</Button>
+                <Button className="btn btn-success">Editar</Button>
+              </td>
+            </tr>
           </tbody>
         </Table>
       </Container>
