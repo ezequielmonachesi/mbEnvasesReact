@@ -15,7 +15,7 @@ const Inicio = () => {
       {/* Banner Principal */}
       <Container
         fluid
-        className="mainSection banner d-flex justify-content-center align-items-center"
+        className="mainSection banner d-flex justify-content-center align-items-center border-bottom border-success border-opacity-75 shadow-sm"
       >
         <h1 className="display-1 text-white text-center">
           Bienvenidos a envasesMB
