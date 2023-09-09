@@ -22,7 +22,7 @@ const Inicio = () => {
       </Container>
       {/* Seccion Nuestros productos */}
       <Container>
-        <div className="shadow text-center py-5 border-3 my-5">
+        <div className="shadow-sm text-center py-5 border-3 my-5 rounded-3">
           <h2>Nuestros productos</h2>
           <h5 className="mt-3 text-secondary">
             Papel - Aluminio - Cartón - Plástico - Telgopor
@@ -42,8 +42,8 @@ const Inicio = () => {
       </Container>
       {/* Trayectoria */}
       <Container>
-        <Row>
-          <Col md={5} lg={3}>
+        <Row className="justify-content-center gy-4">
+          <Col md={5} lg={3} className="">
             <div className="d-flex justify-content-center align-items-center p-4 bg-success bg-opacity-50 rounded-3 shadow">
               <span className="display-6 lh-1 text-blue mb-0">
                 <RocketTakeoff></RocketTakeoff>
@@ -57,7 +57,7 @@ const Inicio = () => {
               </div>
             </div>
           </Col>
-          <Col md={5} lg={3}>
+          <Col md={5} lg={3} className="">
             <div className="d-flex justify-content-center align-items-center p-4 bg-warning bg-opacity-50 rounded-3 shadow">
               <span className="display-6 lh-1 text-blue mb-0">
                 <HouseCheckFill></HouseCheckFill>
@@ -71,7 +71,7 @@ const Inicio = () => {
               </div>
             </div>
           </Col>
-          <Col md={5} lg={3}>
+          <Col md={5} lg={3} className="">
             <div className="d-flex justify-content-center align-items-center p-4 bg-success bg-opacity-50 rounded-3 shadow">
               <span className="display-6 lh-1 text-blue mb-0">
                 <PeopleFill></PeopleFill>
@@ -85,7 +85,7 @@ const Inicio = () => {
               </div>
             </div>
           </Col>
-          <Col md={5} lg={3}>
+          <Col md={5} lg={3} className="">
             <div className="d-flex justify-content-center align-items-center p-4 bg-warning bg-opacity-50 rounded-3 shadow">
               <span className="display-6 lh-1 text-blue mb-0">
                 <BoxSeamFill></BoxSeamFill>
@@ -101,6 +101,7 @@ const Inicio = () => {
           </Col>
         </Row>
       </Container>
+      {/* ¿Que hacemos? */}
       <Container fluid className="bannerDos mt-5 py-5">
         <Row className="mt-5 ">
           <Col>
@@ -112,33 +113,36 @@ const Inicio = () => {
           <Col>
             <ul className="list-unstyled">
               <li className="fs-5">
-                <Check2Circle className="text-success"></Check2Circle> Potes de telgopor y de plásticos.
+                <Check2Circle className="text-success"></Check2Circle> Potes de
+                telgopor y de plásticos.
               </li>
               <li className="fs-5">
-                <Check2Circle className="text-success"></Check2Circle> Rollos de papel film: stretch,
-                manteca, aluminio.
+                <Check2Circle className="text-success"></Check2Circle> Rollos de
+                papel film: stretch, manteca, aluminio.
               </li>
               <li className="fs-5">
-                <Check2Circle className="text-success"></Check2Circle> Rollos de papel film: stretch,
-                manteca, aluminio.
+                <Check2Circle className="text-success"></Check2Circle> Rollos de
+                papel film: stretch, manteca, aluminio.
               </li>
               <li className="fs-5">
-                <Check2Circle className="text-success"></Check2Circle> Rollos de: papel gris, Kraff,
-                regalo, servilleta, higiénico.
+                <Check2Circle className="text-success"></Check2Circle> Rollos
+                de: papel gris, Kraff, regalo, servilleta, higiénico.
               </li>
               <li className="fs-5">
-                <Check2Circle className="text-success"></Check2Circle> Papel térmico, de obra y doble
-                químico.
+                <Check2Circle className="text-success"></Check2Circle> Papel
+                térmico, de obra y doble químico.
               </li>
               <li className="fs-5">
-                <Check2Circle className="text-success"></Check2Circle> Toallas plegables
+                <Check2Circle className="text-success"></Check2Circle> Toallas
+                plegables
               </li>
               <li className="fs-5">
-                <Check2Circle className="text-success"></Check2Circle> Servilletas para aparatos,
-                confiteria, service express.
+                <Check2Circle className="text-success"></Check2Circle>{" "}
+                Servilletas para aparatos, confiteria, service express.
               </li>
               <li className="fs-5">
-                <Check2Circle className="text-success"></Check2Circle> Servilletas "Elegantes"
+                <Check2Circle className="text-success"></Check2Circle>{" "}
+                Servilletas "Elegantes"
               </li>
             </ul>
           </Col>
