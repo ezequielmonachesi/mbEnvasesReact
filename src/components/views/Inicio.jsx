@@ -103,10 +103,16 @@ const Inicio = () => {
         </Row>
       </Container>
       {/* ¿Que hacemos? */}
-      <Container fluid className="bannerDos mt-5 py-5">
+      <Container
+        fluid
+        className="bannerDos mt-5 py-5 border-top border-bottom border-success border-opacity-75 my-4 shadow-sm"
+      >
         <Row className="gy-4">
           <Col sm={12} className="text-center">
-            <h2>¿Qué hacemos? <PatchCheck className="text-warning opacity-75"></PatchCheck></h2>
+            <h2>
+              ¿Qué hacemos?{" "}
+              <PatchCheck className="text-warning opacity-75"></PatchCheck>
+            </h2>
             <h5 className="text-success">
               Proveemos amplia gama de envases y de productos para embalajes.
             </h5>
