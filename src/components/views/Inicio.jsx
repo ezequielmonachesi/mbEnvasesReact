@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import {
   BoxSeamFill,
+  Check2Circle,
   HouseCheckFill,
   PeopleFill,
   RocketTakeoff,
@@ -97,6 +98,49 @@ const Inicio = () => {
                 <p className="mb-0">Productos</p>
               </div>
             </div>
+          </Col>
+        </Row>
+      </Container>
+      <Container fluid className="bannerDos mt-5 py-5">
+        <Row className="mt-5 ">
+          <Col>
+            <h2>¿Qué hacemos?</h2>
+            <h5>
+              Proveemos amplia gama de envases y de productos para embalajes.
+            </h5>
+          </Col>
+          <Col>
+            <ul className="list-unstyled">
+              <li className="fs-5">
+                <Check2Circle className="text-success"></Check2Circle> Potes de telgopor y de plásticos.
+              </li>
+              <li className="fs-5">
+                <Check2Circle className="text-success"></Check2Circle> Rollos de papel film: stretch,
+                manteca, aluminio.
+              </li>
+              <li className="fs-5">
+                <Check2Circle className="text-success"></Check2Circle> Rollos de papel film: stretch,
+                manteca, aluminio.
+              </li>
+              <li className="fs-5">
+                <Check2Circle className="text-success"></Check2Circle> Rollos de: papel gris, Kraff,
+                regalo, servilleta, higiénico.
+              </li>
+              <li className="fs-5">
+                <Check2Circle className="text-success"></Check2Circle> Papel térmico, de obra y doble
+                químico.
+              </li>
+              <li className="fs-5">
+                <Check2Circle className="text-success"></Check2Circle> Toallas plegables
+              </li>
+              <li className="fs-5">
+                <Check2Circle className="text-success"></Check2Circle> Servilletas para aparatos,
+                confiteria, service express.
+              </li>
+              <li className="fs-5">
+                <Check2Circle className="text-success"></Check2Circle> Servilletas "Elegantes"
+              </li>
+            </ul>
           </Col>
         </Row>
       </Container>
