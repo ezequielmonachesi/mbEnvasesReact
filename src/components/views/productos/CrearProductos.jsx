@@ -2,9 +2,10 @@ import React from 'react';
 
 const CrearProductos = () => {
     return (
-        <div>
-            CrearProductos
-        </div>
+        <>
+        <h2>Crear producto</h2>
+        
+        </>
     );
 };
 

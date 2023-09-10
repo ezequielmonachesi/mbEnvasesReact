@@ -1,13 +1,25 @@
-import React from "react";
-import { Button, Container, Form, Row, Table } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Container, Form, Modal, Row, Table } from "react-bootstrap";
+import CrearProductos from "./productos/CrearProductos";
 
 const Administrador = () => {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <>
       <Container className="mainSection">
         <div className="d-flex justify-content-between align-items-center mt-5">
           <h1 className="display-4 ">Productos disponibles</h1>
-          <Button className="btn btn-success">Agregar</Button>
+          <Button
+            className="btn btn-success"
+            onClick={() => setModalShow(true)}
+          >
+            Agregar
+          </Button>
+          <MyVerticallyCenteredModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
         </div>
         <div className="d-md-flex justify-content-end mt-3 mt-md-3">
           <Form className="d-flex ms-2">
@@ -70,20 +82,15 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">EnvasesMB</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        <CrearProductos></CrearProductos>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={props.onHide} variant="danger">
+          Cerrar
+        </Button>
       </Modal.Footer>
     </Modal>
   );
