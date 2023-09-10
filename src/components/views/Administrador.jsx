@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Container, Form, Modal, Row, Table } from "react-bootstrap";
 import CrearProductos from "./productos/CrearProductos";
+import EditarProductos from "./productos/EditarProductos";
 
 const Administrador = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -16,10 +17,7 @@ const Administrador = () => {
           >
             Agregar
           </Button>
-          <MyVerticallyCenteredModal
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-          />
+          <ModalProducto show={modalShow} onHide={() => setModalShow(false)} />
         </div>
         <div className="d-md-flex justify-content-end mt-3 mt-md-3">
           <Form className="d-flex ms-2">
@@ -52,7 +50,12 @@ const Administrador = () => {
               <td>Plastico</td>
               <td>
                 <Button className="btn btn-danger me-md-2">Borrar</Button>
-                <Button className="btn btn-success mt-2 mt-md-0">Editar</Button>
+                <Button
+                  className="btn btn-success mt-2 mt-md-0"
+                  onClick={() => setModalShow(true)}
+                >
+                  Editar
+                </Button>
               </td>
             </tr>
             <tr>
@@ -73,7 +76,7 @@ const Administrador = () => {
   );
 };
 
-function MyVerticallyCenteredModal(props) {
+function ModalProducto(props) {
   return (
     <Modal
       {...props}
