@@ -82,14 +82,19 @@ function MyVerticallyCenteredModal(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">EnvasesMB</Modal.Title>
+        <Modal.Title
+          id="contained-modal-title-vcenter"
+          className=" text-secondary"
+        >
+          EnvasesMB
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <CrearProductos></CrearProductos>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide} variant="danger">
-          Cerrar
+          Salir
         </Button>
       </Modal.Footer>
     </Modal>
