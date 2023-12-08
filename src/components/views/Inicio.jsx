@@ -8,6 +8,7 @@ import {
   PeopleFill,
   RocketTakeoff,
 } from "react-bootstrap-icons";
+import CardProductos from "./productos/CardProductos";
 
 const Inicio = () => {
   return (
@@ -155,6 +156,13 @@ const Inicio = () => {
           </Col>
         </Row>
       </Container>
+      {/* Productos */}
+      <Row>
+        <CardProductos></CardProductos>
+        <CardProductos></CardProductos>
+        <CardProductos></CardProductos>
+        <CardProductos></CardProductos>
+      </Row>
     </>
   );
 };
