@@ -7,13 +7,15 @@ import Administrador from "./components/views/Administrador";
 import Contacto from "./components/views/Contacto";
 import CardProductos from "./components/views/productos/CardProductos";
 import "./components/views/productos/cardProductos.css";
+import CrearProductos from "./components/views/productos/CrearProductos";
 
 function App() {
   return (
     <>
       <Menu></Menu>
-      <Inicio></Inicio>
+      {/* <Inicio></Inicio> */}
       {/* <Administrador></Administrador> */}
+      <CrearProductos></CrearProductos>
       {/* <Contacto></Contacto> */}
       <Footer></Footer>
     </>
