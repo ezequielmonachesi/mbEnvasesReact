@@ -10,9 +10,9 @@ function App() {
   return (
     <>
       <Menu></Menu>
-      {/* <Inicio></Inicio> */}
+      <Inicio></Inicio>
       {/* <Administrador></Administrador> */}
-      <Contacto></Contacto>
+      {/* <Contacto></Contacto> */}
       <Footer></Footer>
     </>
   );
