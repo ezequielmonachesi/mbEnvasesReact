@@ -1,4 +1,31 @@
 {
-  "productos": [],
+  "productos": [
+    {
+      "id": 1,
+      "nombreProducto": "Bolsa Kraft",
+      "precio": 200,
+      "cantidad": 5,
+      "medidas": {
+        "alto": {
+          "valor": 8,
+          "unidad": "cm"
+        },
+        "ancho": {
+          "valor": 7,
+          "unidad": "cm"
+        },
+        "largo": {
+          "valor": 20,
+          "unidad": "cm"
+        }
+      },
+      "marca": "packing",
+      "tipo": "plastico",
+      "color": "blanco",
+      "paquete": 2,
+      "descripcion": "Es una muy buena bolsa para guardar un sanguche de ternera con queso",
+      "imagen": "https://mbenvases.com/assets/productos/bolsas-kraft.jpg"
+    }
+  ],
   "usuarios": []
 }

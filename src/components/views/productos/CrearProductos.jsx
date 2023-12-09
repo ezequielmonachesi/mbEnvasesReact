@@ -54,9 +54,9 @@ const CrearProductos = () => {
                 </Form.Select>
               </Col>
             </Form.Group>
-            <Form.Group as={Row} className="mb-3" controlId="profundidad">
+            <Form.Group as={Row} className="mb-3" controlId="largo">
               <Col sm={8}>
-                <Form.Control type="number" placeholder="profundidad" />
+                <Form.Control type="number" placeholder="largo" />
               </Col>
               <Col sm={4}>
                 <Form.Select aria-label="Default select example">

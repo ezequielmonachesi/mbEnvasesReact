@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import {
   BoxSeamFill,
@@ -9,8 +9,14 @@ import {
   RocketTakeoff,
 } from "react-bootstrap-icons";
 import CardProductos from "./productos/CardProductos";
+import { getProductos } from "../../helpers/queries";
 
 const Inicio = () => {
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    getProductos().then((respuesta) => setProductos(respuesta));
+  }, []);
   return (
     <>
       {/* Banner Principal */}
@@ -158,10 +164,9 @@ const Inicio = () => {
       </Container>
       {/* Productos */}
       <Row>
-        <CardProductos></CardProductos>
-        <CardProductos></CardProductos>
-        <CardProductos></CardProductos>
-        <CardProductos></CardProductos>
+        {productos.map((producto) => (
+          <CardProductos producto={producto}></CardProductos>
+        ))}
       </Row>
     </>
   );
