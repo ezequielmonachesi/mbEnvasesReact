@@ -14,10 +14,10 @@ function App() {
   return (
     <>
       <Menu></Menu>
-      <Inicio></Inicio>
-      {/* <Administrador></Administrador> */}
+      {/* <Inicio></Inicio> */}
+      <Administrador></Administrador>
       {/* <CrearProductos></CrearProductos> */}
-      <EditarProductos></EditarProductos>
+      {/* <EditarProductos></EditarProductos> */}
       {/* <Contacto></Contacto> */}
       <Footer></Footer>
     </>
