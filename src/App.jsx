@@ -8,6 +8,7 @@ import Contacto from "./components/views/Contacto";
 import CardProductos from "./components/views/productos/CardProductos";
 import "./components/views/productos/cardProductos.css";
 import CrearProductos from "./components/views/productos/CrearProductos";
+import EditarProductos from "./components/views/productos/EditarProductos";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <Menu></Menu>
       <Inicio></Inicio>
       {/* <Administrador></Administrador> */}
-      <CrearProductos></CrearProductos>
+      {/* <CrearProductos></CrearProductos> */}
+      <EditarProductos></EditarProductos>
       {/* <Contacto></Contacto> */}
       <Footer></Footer>
     </>
