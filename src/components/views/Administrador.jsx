@@ -5,6 +5,7 @@ import EditarProductos from "./productos/EditarProductos";
 import { getProductos } from "../../helpers/queries";
 import Swal from "sweetalert2";
 import ItemProductos from "./productos/ItemProductos";
+import { Link } from "react-router-dom";
 
 const Administrador = () => {
   const [productos, setProductos] = useState([]);
@@ -29,7 +30,7 @@ const Administrador = () => {
       <Container className="mainSection">
         <div className="d-flex justify-content-between align-items-center mt-5">
           <h1 className="display-4 ">Productos disponibles</h1>
-          <Button className="btn btn-success">Agregar</Button>
+          <Link className="btn btn-success" to={'/crear-producto'}>Agregar</Link>
         </div>
         <div className="d-md-flex justify-content-end mt-3 mt-md-3">
           <Form className="d-flex ms-2">

@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap-icons";
 import CardProductos from "./productos/CardProductos";
 import { getProductos } from "../../helpers/queries";
+import Administrador from "./Administrador";
 
 const Inicio = () => {
   const [productos, setProductos] = useState([]);
@@ -20,16 +21,16 @@ const Inicio = () => {
   return (
     <>
       {/* Banner Principal */}
-      <Container
+      {/* <Container
         fluid
         className="mainSection banner d-flex justify-content-center align-items-center border-bottom border-success border-opacity-75 shadow-sm"
       >
         <h1 className="display-1 text-white text-center">
           Bienvenidos a envasesMB
         </h1>
-      </Container>
+      </Container> */}
       {/* Seccion Nuestros productos */}
-      <Container>
+      {/* <Container>
         <div className="shadow-sm text-center py-5 border-3 my-5 rounded-3">
           <h2>Nuestros productos</h2>
           <h5 className="mt-3 text-secondary">
@@ -47,9 +48,9 @@ const Inicio = () => {
             </Button>
           </div>
         </div>
-      </Container>
+      </Container> */}
       {/* Trayectoria */}
-      <Container>
+      {/* <Container>
         <Row className="justify-content-center gy-4">
           <Col md={5} lg={3} className="">
             <div className="d-flex justify-content-center align-items-center p-4 bg-success bg-opacity-50 rounded-3 shadow">
@@ -108,9 +109,9 @@ const Inicio = () => {
             </div>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
       {/* ¿Que hacemos? */}
-      <Container
+      {/* <Container
         fluid
         className="bannerDos mt-5 py-5 border-top border-bottom border-success border-opacity-75 my-4 shadow-sm"
       >
@@ -161,12 +162,16 @@ const Inicio = () => {
             </ul>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
       {/* Productos */}
       <Container>
+        <Administrador></Administrador>
         <Row>
           {productos.map((producto) => (
-            <CardProductos producto={producto} key={producto.id}></CardProductos>
+            <CardProductos
+              producto={producto}
+              key={producto.id}
+            ></CardProductos>
           ))}
         </Row>
       </Container>

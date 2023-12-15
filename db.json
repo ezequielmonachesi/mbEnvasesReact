@@ -83,6 +83,16 @@
       "paquetePorBulto": "",
       "imagen": "https://www.smpdescartables.com/cdn/shop/products/COD-9098-1_1d110512-e8ed-4765-87ce-3044f2a8f9c1.jpg?v=1645111593",
       "id": 8
+    },
+    {
+      "nombreProducto": "Servilletas para bares x1000u x2000u 5x5cm",
+      "medidas": "5x5",
+      "marca": "Elite",
+      "categoria": "papel",
+      "color": "blanco",
+      "paquetePorBulto": "4",
+      "imagen": "https://mbenvases.com/assets/productos/servilletaBar.png",
+      "id": 9
     }
   ],
   "usuarios": []

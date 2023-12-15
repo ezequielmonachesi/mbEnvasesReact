@@ -130,7 +130,7 @@ const CrearProductos = () => {
             <Form.Group className="mb-3" controlId="tipo">
               <Form.Label>Tipo</Form.Label>
               <Form.Select
-                {...register("tipo", {
+                {...register("categoria", {
                   required: "La categoría es obligatoria",
                 })}
               >
@@ -177,7 +177,12 @@ const CrearProductos = () => {
                 {...register("paquetePorBulto", {
                   max: {
                     value: 200,
+                    message: "La cantidad máxima es de 200",
                   },
+                  min:{
+                    value: 0,
+                    message: "Tiene que estar entre 1 y 1000"
+                  }
                 })}
               />
               <Form.Text className="text-danger">
