@@ -163,11 +163,13 @@ const Inicio = () => {
         </Row>
       </Container>
       {/* Productos */}
-      <Row>
-        {productos.map((producto) => (
-          <CardProductos producto={producto}></CardProductos>
-        ))}
-      </Row>
+      <Container>
+        <Row>
+          {productos.map((producto) => (
+            <CardProductos producto={producto} key={producto.id}></CardProductos>
+          ))}
+        </Row>
+      </Container>
     </>
   );
 };

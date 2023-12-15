@@ -4,27 +4,85 @@
       "id": 1,
       "nombreProducto": "Bolsa Kraft",
       "precio": 200,
-      "cantidad": 5,
-      "medidas": {
-        "alto": {
-          "valor": 8,
-          "unidad": "cm"
-        },
-        "ancho": {
-          "valor": 7,
-          "unidad": "cm"
-        },
-        "largo": {
-          "valor": 20,
-          "unidad": "cm"
-        }
-      },
+      "medidas": "30x30",
       "marca": "packing",
       "tipo": "plastico",
       "color": "blanco",
-      "paquete": 2,
+      "paquetePorBulto": 2,
       "descripcion": "Es una muy buena bolsa para guardar un sanguche de ternera con queso",
       "imagen": "https://mbenvases.com/assets/productos/bolsas-kraft.jpg"
+    },
+    {
+      "nombreProducto": "Blonda",
+      "precio": 450,
+      "medidas": "30x30",
+      "marca": "packing",
+      "tipo": "plastico",
+      "color": "blanco",
+      "paquetePorBulto": 1,
+      "descripcion": "Excelente calidad para la torta",
+      "imagen": "https://mbenvases.com/assets/productos/blonda.jpg",
+      "id": 2
+    },
+    {
+      "nombreProducto": "Papel doble químico 76x20x10unidades",
+      "medidas": "76x20",
+      "marca": "La mejor",
+      "tipo": "papel",
+      "color": "blanco",
+      "paquetePorBulto": "",
+      "imagen": "https://mbenvases.com/assets/productos/papel-quimico.jpg",
+      "id": 3
+    },
+    {
+      "nombreProducto": "Papel doble químico 76x28x10unidades",
+      "medidas": "76x28",
+      "marca": "La mejor",
+      "tipo": "papel",
+      "color": "blanco",
+      "paquetePorBulto": "",
+      "imagen": "https://mbenvases.com/assets/productos/papel-quimico.jpg",
+      "id": 4
+    },
+    {
+      "nombreProducto": "Papel doble químico 36x36x100unidades",
+      "medidas": "36x36",
+      "marca": "papelito",
+      "tipo": "papel",
+      "color": "blanco",
+      "paquetePorBulto": "3",
+      "imagen": "https://mbenvases.com/assets/productos/papel-quimico.jpg",
+      "id": 5
+    },
+    {
+      "nombreProducto": "Papel doble químico 36x56x100unidades",
+      "medidas": "36x56",
+      "marca": "papelito",
+      "tipo": "papel",
+      "color": "blanco",
+      "paquetePorBulto": "3",
+      "imagen": "https://mbenvases.com/assets/productos/papel-quimico.jpg",
+      "id": 6
+    },
+    {
+      "nombreProducto": "Bolsas Romi 20x08x24unidades",
+      "medidas": "20x08x24",
+      "marca": "Romix",
+      "tipo": "papel",
+      "color": "multicolor",
+      "paquetePorBulto": "10",
+      "imagen": "https://mbenvases.com/assets/productos/bolsas-romy-color.jpg",
+      "id": 7
+    },
+    {
+      "nombreProducto": "caja pizza",
+      "medidas": "40x40",
+      "marca": "pizzalinda",
+      "tipo": "carton",
+      "color": "marron",
+      "paquetePorBulto": "",
+      "imagen": "https://www.smpdescartables.com/cdn/shop/products/COD-9098-1_1d110512-e8ed-4765-87ce-3044f2a8f9c1.jpg?v=1645111593",
+      "id": 8
     }
   ],
   "usuarios": []
