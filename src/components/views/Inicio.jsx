@@ -164,10 +164,6 @@ const Inicio = () => {
         </Row>
       </Container>
       {/* Productos */}
-      <Container>
-        <Administrador></Administrador>
-        
-      </Container>
     </>
   );
 };

@@ -4,9 +4,17 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../../assets/logo.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
-function Menu() {
+function Menu({ usuarioLogueado, setUsuarioLogueado }) {
+  const navegacion = useNavigate();
+
+  const logout = () => {
+    localStorage.removeItem("usuario");
+    setUsuarioLogueado({});
+    navegacion("/");
+  };
+
   return (
     <Navbar
       expand="lg"
@@ -31,12 +39,28 @@ function Menu() {
             <NavLink end to={"/sobre-nosotros"} className={"nav-item nav-link"}>
               Sobre Nosotros
             </NavLink>
-            <NavLink end to={"/administrador"} className={"nav-item nav-link"}>
-              Administrador
-            </NavLink>
-            <NavLink end to={"/iniciar-sesion"} className={"nav-item nav-link"}>
-              Iniciar Sesión
-            </NavLink>
+            {usuarioLogueado.nombreUsuario ? (
+              <>
+                <NavLink
+                  end
+                  to={"/administrador"}
+                  className={"nav-item nav-link"}
+                >
+                  Administrador
+                </NavLink>
+                <Button variant="dark" onClick={logout}>
+                  Cerrar Sesión
+                </Button>
+              </>
+            ) : (
+              <NavLink
+                end
+                to={"/iniciar-sesion"}
+                className={"nav-item nav-link"}
+              >
+                Iniciar Sesión
+              </NavLink>
+            )}
             <Form className="d-flex ms-2">
               <Form.Control
                 type="search"
