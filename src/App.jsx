@@ -18,7 +18,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
-          {/* <Inicio></Inicio> */}
           <Route
             exact
             path="/crear-producto"
@@ -26,13 +25,14 @@ function App() {
           ></Route>
           <Route
             exact
+            path="/editar-producto/:id"
+            element={<EditarProductos></EditarProductos>}
+          ></Route>
+          <Route
+            exact
             path="/administrador"
             element={<Administrador></Administrador>}
           ></Route>
-
-          {/* <CrearProductos></CrearProductos> */}
-          {/* <EditarProductos></EditarProductos> */}
-          {/* <Contacto></Contacto> */}
         </Routes>
       </BrowserRouter>
       <Footer></Footer>

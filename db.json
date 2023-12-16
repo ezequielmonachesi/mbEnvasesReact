@@ -13,16 +13,15 @@
       "imagen": "https://mbenvases.com/assets/productos/bolsas-kraft.jpg"
     },
     {
-      "nombreProducto": "Blonda",
-      "precio": 450,
+      "nombreProducto": "Blondaa",
+      "id": 2,
       "medidas": "30x30",
       "marca": "packing",
       "categoria": "plastico",
       "color": "blanco",
       "paquetePorBulto": 1,
       "descripcion": "Excelente calidad para la torta",
-      "imagen": "https://mbenvases.com/assets/productos/blonda.jpg",
-      "id": 2
+      "imagen": "https://mbenvases.com/assets/productos/blonda.jpg"
     },
     {
       "nombreProducto": "Papel doble químico 76x20x10unidades",
@@ -93,6 +92,26 @@
       "paquetePorBulto": "4",
       "imagen": "https://mbenvases.com/assets/productos/servilletaBar.png",
       "id": 9
+    },
+    {
+      "nombreProducto": "bolsas craf",
+      "medidas": "3x5",
+      "marca": "jhbh",
+      "categoria": "polietileno",
+      "color": "blanco",
+      "paquetePorBulto": "3",
+      "imagen": "kbkjjk",
+      "id": 10
+    },
+    {
+      "nombreProducto": "Servilletas de papel MB",
+      "id": 11,
+      "medidas": "5x5",
+      "marca": "La leoninaasdsad",
+      "categoria": "papel",
+      "color": "negro",
+      "paquetePorBulto": "2",
+      "imagen": "https://i.ebayimg.com/images/g/9swAAOSwL9llVHAA/s-l500.jpg"
     }
   ],
   "usuarios": []
