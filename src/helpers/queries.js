@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
+const URL_usuarios = import.meta.emv.VITE_API_USUARIOS;
 const URL_productos = import.meta.env.VITE_API_PRODUCTOS;
+
 
 export const getProductos = async () => {
   try {

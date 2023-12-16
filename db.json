@@ -114,5 +114,9 @@
       "imagen": "https://i.ebayimg.com/images/g/9swAAOSwL9llVHAA/s-l500.jpg"
     }
   ],
-  "usuarios": []
+  "usuarios": [{
+    "id": 1, "nombreUsuario": "ezequiel", "emai": "eze@gmail.com", "password":"1234"
+  },{
+
+  }]
 }
