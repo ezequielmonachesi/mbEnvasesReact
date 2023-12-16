@@ -10,12 +10,15 @@ import "./components/views/productos/cardProductos.css";
 import CrearProductos from "./components/views/productos/CrearProductos";
 import EditarProductos from "./components/views/productos/EditarProductos";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Productos from "./components/views/Productos";
+import Login from "./components/views/Login";
+import SobreNosotros from "./components/views/SobreNosotros";
 
 function App() {
   return (
     <>
-      <Menu></Menu>
       <BrowserRouter>
+        <Menu></Menu>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
           <Route
@@ -33,6 +36,18 @@ function App() {
             path="/administrador"
             element={<Administrador></Administrador>}
           ></Route>
+          <Route
+            exact
+            path="/productos"
+            element={<Productos></Productos>}
+          ></Route>
+          <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
+          <Route
+            exact
+            path="/sobre-nosotros"
+            element={<SobreNosotros></SobreNosotros>}
+          ></Route>
+          <Route exact path="/iniciar-sesion" element={<Login></Login>}></Route>
         </Routes>
       </BrowserRouter>
       <Footer></Footer>

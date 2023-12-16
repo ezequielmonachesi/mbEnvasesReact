@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../../assets/logo.png";
+import { Link, NavLink } from "react-router-dom";
 
 function Menu() {
   return (
@@ -12,18 +13,30 @@ function Menu() {
       className="bg-body-tertiary border-bottom border-success border-opacity-75 shadow-sm"
     >
       <Container className="d-flex">
-        <Navbar.Brand href="#">
+        <Navbar.Brand as={Link} to={"/"}>
           <img src={logo} alt="logo" height="55px" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse>
           <Nav className="text-center text-md-start ms-auto my-2 my-lg-0">
-            <Nav.Link href="#action1">Inicio</Nav.Link>
-            <Nav.Link href="#action2">Productos</Nav.Link>
-            <Nav.Link href="#action2">Contacto</Nav.Link>
-            <Nav.Link href="#">Sobre Nosotros</Nav.Link>
-            <Nav.Link href="#">Administrador</Nav.Link>
-            <Nav.Link href="#">Iniciar Sesión</Nav.Link>
+            <NavLink end to={"/"} className={"nav-item nav-link"}>
+              Inicio
+            </NavLink>
+            <NavLink end to={"/productos"} className={"nav-item nav-link"}>
+              Productos
+            </NavLink>
+            <NavLink end to={"/contacto"} className={"nav-item nav-link"}>
+              Contacto
+            </NavLink>
+            <NavLink end to={"/sobre-nosotros"} className={"nav-item nav-link"}>
+              Sobre Nosotros
+            </NavLink>
+            <NavLink end to={"/administrador"} className={"nav-item nav-link"}>
+              Administrador
+            </NavLink>
+            <NavLink end to={"/iniciar-sesion"} className={"nav-item nav-link"}>
+              Iniciar Sesión
+            </NavLink>
             <Form className="d-flex ms-2">
               <Form.Control
                 type="search"
