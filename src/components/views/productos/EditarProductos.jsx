@@ -1,5 +1,9 @@
+import { useEffect } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useParams } from "react-router-dom";
+import { editarProducto, obtenerUnProducto } from "../../../helpers/queries";
+import Swal from "sweetalert2";
 
 const EditarProductos = () => {
   const {
@@ -7,24 +11,39 @@ const EditarProductos = () => {
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm();
+  const { id, nombreProducto } = useParams();
+
+  useEffect(() => {
+    console.log(id);
+    obtenerUnProducto(id).then((respuesta) => {
+      console.log(respuesta);
+      setValue("nombreProducto", respuesta.nombreProducto);
+      setValue("id", respuesta.id);
+      setValue("categoria", respuesta.categoria);
+      setValue("color", respuesta.color);
+      setValue("medidas", respuesta.medidas);
+      setValue("marca", respuesta.marca);
+      setValue("paquetePorBulto", respuesta.paquetePorBulto);
+      setValue("descripcion", respuesta.descripcion);
+      setValue("imagen", respuesta.imagen);
+    });
+  }, []);
 
   const onSubmit = (nuevoProducto) => {
     console.log(nuevoProducto);
-    crearProducto(nuevoProducto).then((respuesta) => {
-      console.log(respuesta);
-      console.log(respuesta.status);
-      if (respuesta && respuesta.status === 201) {
+    editarProducto(id, nuevoProducto).then((respuesta) => {
+      if (respuesta && respuesta.status === 200) {
         Swal.fire(
-          "Producto creado",
-          `El producto ${nuevoProducto.nombreProducto} fue creado correctamente`,
+          "Producto modificado",
+          `El producto ${nuevoProducto.nombreProducto} fue modificado`,
           "success"
         );
-        reset();
       } else {
         Swal.fire(
-          "Ocurrio un error",
-          `El producto ${nuevoProducto.nombreProducto} no pudo ser creado, intente en unos minutos`,
+          "Ocurrió un error",
+          `El producto ${nuevoProducto.nombreProducto} no pudo ser editado`,
           "error"
         );
       }
@@ -61,7 +80,7 @@ const EditarProductos = () => {
           <Col md="6">
             <Form.Group className="mb-3" controlId="idProducto">
               <Form.Label>Id Producto</Form.Label>
-              <Form.Control type="text" disabled />
+              <Form.Control type="text" disabled {...register("id")} />
             </Form.Group>
           </Col>
           <Col md="6">
@@ -127,7 +146,7 @@ const EditarProductos = () => {
             <Form.Group className="mb-3" controlId="tipo">
               <Form.Label>Tipo</Form.Label>
               <Form.Select
-                {...register("tipo", {
+                {...register("categoria", {
                   required: "La categoría es obligatoria",
                 })}
               >
@@ -185,7 +204,16 @@ const EditarProductos = () => {
           <Col sm="12">
             <Form.Group className="mb-3" controlId="descripcion">
               <Form.Label>Descripción</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Control
+                as="textarea"
+                rows={3}
+                {...register("descripcion", {
+                  maxLength: {
+                    value: 200,
+                    message: "Debe tener menos de 200 caracteres",
+                  },
+                })}
+              />
             </Form.Group>
           </Col>
           <Col sm="12">
