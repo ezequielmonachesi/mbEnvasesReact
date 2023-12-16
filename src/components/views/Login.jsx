@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Form } from "react-bootstrap";
+import { login } from "../../helpers/queries";
 
 const Login = () => {
   const {
@@ -12,8 +13,14 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (usuario) => {
-    console.log(usuario);
-    
+    login(usuario).then((respuesta) => {
+      console.log(respuesta);
+      if(usuario){
+        
+      }else{
+
+      }
+    });
   };
   return (
     <>

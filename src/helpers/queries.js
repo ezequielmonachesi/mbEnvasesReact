@@ -1,8 +1,29 @@
 import { useEffect, useState } from "react";
 
-const URL_usuarios = import.meta.emv.VITE_API_USUARIOS;
+const URL_usuarios = import.meta.env.VITE_API_USUARIOS;
 const URL_productos = import.meta.env.VITE_API_PRODUCTOS;
 
+export const login = async (usuario) => {
+  try {
+    const respuesta = await fetch(URL_usuarios);
+    const listaUsuarios = await respuesta.json();
+    const usuarioBuscado = listaUsuarios.find(
+      (itemUsuario) => itemUsuario.email === usuario.email
+    );
+    if (usuarioBuscado) {
+      if (usuarioBuscado.password === usuario.password) {
+        return usuarioBuscado;
+      }else{
+        console.log("Passowrd Incorrecto")
+        return null
+      }
+    } else {
+      console.log("El mail no existe");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const getProductos = async () => {
   try {
