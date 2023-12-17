@@ -13,7 +13,7 @@ const ItemProductos = ({ producto }) => {
         <td>
           <Link
             className="btn btn-success me-md-2"
-            to={"/editar-producto/" + producto.id}
+            to={"/administrador/editar-producto/" + producto.id}
           >
             Editar
           </Link>

@@ -14,6 +14,8 @@ import Productos from "./components/views/Productos";
 import Login from "./components/views/Login";
 import SobreNosotros from "./components/views/SobreNosotros";
 import { useState } from "react";
+import RutasProtegidas from "./components/routes/RutasProtegidas";
+import RutasAdministrador from "./components/routes/RutasAdministrador";
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("usuario")) || {};
@@ -29,19 +31,13 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
           <Route
-            exact
-            path="/crear-producto"
-            element={<CrearProductos></CrearProductos>}
-          ></Route>
-          <Route
-            exact
-            path="/editar-producto/:id"
-            element={<EditarProductos></EditarProductos>}
-          ></Route>
-          <Route
-            exact
-            path="/administrador"
-            element={<Administrador></Administrador>}
+            path="/administrador/*"
+            element={
+              <RutasProtegidas>
+                <RutasAdministrador></RutasAdministrador>
+              </RutasProtegidas>
+            
+            }
           ></Route>
           <Route
             exact
