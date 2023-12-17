@@ -2,18 +2,34 @@ import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Form } from "react-bootstrap";
+import { login } from "../../helpers/queries";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ setUsuarioLogueado }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm();
+  const navegacion = useNavigate();
 
   const onSubmit = (usuario) => {
-    console.log(usuario);
-    
+    login(usuario).then((respuesta) => {
+      console.log(respuesta);
+      if (respuesta) {
+        localStorage.setItem("usuario", JSON.stringify(respuesta));
+        setUsuarioLogueado(respuesta);
+        navegacion("/administrador");
+      } else {
+        Swal.fire({
+          title: "Ocurrió un error",
+          text: "El usuario o mail es incorrecto",
+          icon: "error",
+        });
+      }
+    });
   };
   return (
     <>

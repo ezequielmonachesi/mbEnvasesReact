@@ -30,7 +30,7 @@ const Administrador = () => {
       <Container className="mainSection">
         <div className="d-flex justify-content-between align-items-center mt-5">
           <h1 className="display-4 ">Productos disponibles</h1>
-          <Link className="btn btn-success" to={'/crear-producto'}>Agregar</Link>
+          <Link className="btn btn-success" to={'/administrador/crear-producto'}>Agregar</Link>
         </div>
         <div className="d-md-flex justify-content-end mt-3 mt-md-3">
           <Form className="d-flex ms-2">
