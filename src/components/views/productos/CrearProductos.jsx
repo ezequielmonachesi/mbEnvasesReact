@@ -35,8 +35,8 @@ const CrearProductos = () => {
   };
 
   return (
-    <section className="container mainSection">
-      <h4>Crear producto</h4>
+    <section className="container mainSection mt-5">
+      <h1 className="display-4">Crear producto</h1>
       <Form className="mt-4" onSubmit={handleSubmit(onSubmit)}>
         <Row>
           <Col md="6">

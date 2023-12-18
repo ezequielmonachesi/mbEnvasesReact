@@ -14,7 +14,7 @@ const CardProductos = ({ producto }) => {
         <Card.Body className="d-flex flex-column justify-content-between">
           <Card.Title className="text-center">{producto.nombreProducto}</Card.Title>
           <div className="text-end">
-            <Link className="btn btn-success">Ver</Link>
+            <Link className="btn btn-success" to={"/detalle-producto/" + producto.id}>Ver</Link>
           </div>
         </Card.Body>
       </Card>

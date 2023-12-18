@@ -1,6 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./components/views/Productos.css"
+import "./components/views/Productos.css";
+import "./components/views/DetalleProducto.css"
 import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import Inicio from "./components/views/Inicio";
@@ -17,6 +18,7 @@ import SobreNosotros from "./components/views/SobreNosotros";
 import { useState } from "react";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdministrador from "./components/routes/RutasAdministrador";
+import DetalleProducto from "./components/views/DetalleProducto";
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("usuario")) || {};
@@ -37,7 +39,6 @@ function App() {
               <RutasProtegidas>
                 <RutasAdministrador></RutasAdministrador>
               </RutasProtegidas>
-            
             }
           ></Route>
           <Route
@@ -54,6 +55,11 @@ function App() {
                 setUsuarioLogueado={setUsuarioLogueado}
               ></Login>
             }
+          ></Route>
+          <Route
+            exact
+            path="/detalle-producto/:id"
+            element={<DetalleProducto></DetalleProducto>}
           ></Route>
           <Route exact path="/contacto" element={<Contacto></Contacto>}></Route>
           <Route
