@@ -1,11 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import { editarProducto, obtenerUnProducto } from "../../../helpers/queries";
 import Swal from "sweetalert2";
+import { goToTheTop } from "../../../helpers/functions";
 
 const EditarProductos = () => {
+  const [producto, setProducto] = useState(null);
   const {
     register,
     handleSubmit,
@@ -13,13 +15,13 @@ const EditarProductos = () => {
     reset,
     setValue,
   } = useForm();
-  const { id, nombreProducto } = useParams();
-  const navegacion = useNavigate()
+  const { id } = useParams();
+  const navegacion = useNavigate();
 
   useEffect(() => {
-    console.log(id);
+    goToTheTop();
     obtenerUnProducto(id).then((respuesta) => {
-      console.log(respuesta);
+      setProducto(respuesta.nombreProducto);
       setValue("nombreProducto", respuesta.nombreProducto);
       setValue("id", respuesta.id);
       setValue("categoria", respuesta.categoria);
@@ -41,7 +43,7 @@ const EditarProductos = () => {
           `El producto ${nuevoProducto.nombreProducto} fue modificado`,
           "success"
         );
-        navegacion("/administrador")
+        navegacion("/administrador");
       } else {
         Swal.fire(
           "Ocurrió un error",
@@ -53,8 +55,8 @@ const EditarProductos = () => {
   };
 
   return (
-    <section className="container mainSection">
-      <h4>Editar producto</h4>
+    <section className="container mainSection mt-5">
+      <h1 className="display-4">Editar producto: {producto}</h1>
       <Form className="mt-4" onSubmit={handleSubmit(onSubmit)}>
         <Row>
           <Col md="6">

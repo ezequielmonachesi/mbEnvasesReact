@@ -12,7 +12,7 @@
       "imagen": "https://mbenvases.com/assets/productos/bolsas-kraft.jpg"
     },
     {
-      "nombreProducto": "Blondaa",
+      "nombreProducto": "Blondaa 20x30x50 1cmx10cm",
       "id": 2,
       "medidas": "30x30",
       "marca": "packing",
@@ -51,6 +51,26 @@
       "paquetePorBulto": "3",
       "imagen": "https://mbenvases.com/assets/productos/papel-quimico.jpg",
       "id": 5
+    },
+    {
+      "nombreProducto": "Papel doble químico 36x36x100unidades",
+      "medidas": "36x36",
+      "marca": "papelito",
+      "categoria": "papel",
+      "color": "blanco",
+      "paquetePorBulto": "3",
+      "imagen": "https://mbenvases.com/assets/productos/papel-quimico.jpg",
+      "id": 6
+    },
+    {
+      "nombreProducto": "Papel doble químico 36x36x100unidades",
+      "medidas": "36x36",
+      "marca": "papelito",
+      "categoria": "papel",
+      "color": "blanco",
+      "paquetePorBulto": "3",
+      "imagen": "https://mbenvases.com/assets/productos/papel-quimico.jpg",
+      "id": 7
     }
   ],
   "usuarios": [

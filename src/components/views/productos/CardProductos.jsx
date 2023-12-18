@@ -1,35 +1,22 @@
 import React from "react";
-import { Card, Col, Image } from "react-bootstrap";
+import { Button, Card, Col, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const CardProductos = ({ producto }) => {
   return (
-    <Col md={4} className="p-4">
-      <Card className="position-relative border rounded-3 m-2">
-        <Image
+    <Col xs={6} md={2}>
+      <Card className="h-100 shadow-sm">
+        <Card.Img
+          variant="top"
           src={producto.imagen}
-          alt="caja-pizza"
-          className="w-100 rounded-2"
+          alt={producto.nombreProducto}
         />
-        <article className="position-absolute top-50 start-50 translate-middle">
-          <div className="mb-5 text-center">
-            <h4 className="fw-bold cursor-default nombre">
-              {producto.nombreProducto}
-            </h4>
-            <button
-              type="button"
-              className="btn btn-success mb-4"
-              data-bs-toggle="modal"
-              data-bs-target="#whatsapp"
-            >
-              Consultar
-            </button>
+        <Card.Body className="d-flex flex-column justify-content-between">
+          <Card.Title className="text-center">{producto.nombreProducto}</Card.Title>
+          <div className="text-end">
+            <Link className="btn btn-success" to={"/detalle-producto/" + producto.id}>Ver</Link>
           </div>
-        </article>
-        <ul className="list-unstyled text-start bg-black text-white bg-opacity-50 borde-inf-ul  position-absolute bottom-0 start-0 m-0 p-1 cursor-default">
-          <li className="letrasUl">Marca: {producto.marca}</li>
-          <li className="letrasUl">Medidas: {producto.medidas}</li>
-          <li className="letrasUl">Color: {producto.color}</li>
-        </ul>
+        </Card.Body>
       </Card>
     </Col>
   );
