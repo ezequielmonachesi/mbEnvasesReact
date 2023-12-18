@@ -1,14 +1,13 @@
 {
   "productos": [
     {
+      "nombreProducto": "Bolsa Kraf",
       "id": 1,
-      "nombreProducto": "Bolsa Kraft",
-      "precio": 200,
-      "medidas": "30x30",
+      "medidas": "30x29",
       "marca": "packing",
       "categoria": "plastico",
       "color": "blanco",
-      "paquetePorBulto": 2,
+      "paquetePorBulto": "2",
       "descripcion": "Es una muy buena bolsa para guardar un sanguche de ternera con queso",
       "imagen": "https://mbenvases.com/assets/productos/bolsas-kraft.jpg"
     },
@@ -52,66 +51,6 @@
       "paquetePorBulto": "3",
       "imagen": "https://mbenvases.com/assets/productos/papel-quimico.jpg",
       "id": 5
-    },
-    {
-      "nombreProducto": "Papel doble químico 36x56x100unidades",
-      "medidas": "36x56",
-      "marca": "papelito",
-      "categoria": "papel",
-      "color": "blanco",
-      "paquetePorBulto": "3",
-      "imagen": "https://mbenvases.com/assets/productos/papel-quimico.jpg",
-      "id": 6
-    },
-    {
-      "nombreProducto": "Bolsas Romi 20x08x24unidades",
-      "medidas": "20x08x24",
-      "marca": "Romix",
-      "categoria": "papel",
-      "color": "multicolor",
-      "paquetePorBulto": "10",
-      "imagen": "https://mbenvases.com/assets/productos/bolsas-romy-color.jpg",
-      "id": 7
-    },
-    {
-      "nombreProducto": "caja pizza",
-      "medidas": "40x40",
-      "marca": "pizzalinda",
-      "categoria": "carton",
-      "color": "marron",
-      "paquetePorBulto": "",
-      "imagen": "https://www.smpdescartables.com/cdn/shop/products/COD-9098-1_1d110512-e8ed-4765-87ce-3044f2a8f9c1.jpg?v=1645111593",
-      "id": 8
-    },
-    {
-      "nombreProducto": "Servilletas para bares x1000u x2000u 5x5cm",
-      "medidas": "5x5",
-      "marca": "Elite",
-      "categoria": "papel",
-      "color": "blanco",
-      "paquetePorBulto": "4",
-      "imagen": "https://mbenvases.com/assets/productos/servilletaBar.png",
-      "id": 9
-    },
-    {
-      "nombreProducto": "bolsas craf",
-      "medidas": "3x5",
-      "marca": "jhbh",
-      "categoria": "polietileno",
-      "color": "blanco",
-      "paquetePorBulto": "3",
-      "imagen": "kbkjjk",
-      "id": 10
-    },
-    {
-      "nombreProducto": "Servilletas de papel MB",
-      "id": 11,
-      "medidas": "5x5",
-      "marca": "La leoninaasdsad",
-      "categoria": "papel",
-      "color": "negro",
-      "paquetePorBulto": "2",
-      "imagen": "https://i.ebayimg.com/images/g/9swAAOSwL9llVHAA/s-l500.jpg"
     }
   ],
   "usuarios": [

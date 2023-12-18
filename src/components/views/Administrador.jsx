@@ -57,6 +57,7 @@ const Administrador = () => {
             {productos.map((producto) => (
               <ItemProductos
                 producto={producto}
+                setProductos={setProductos}
                 key={producto.id}
               ></ItemProductos>
             ))}

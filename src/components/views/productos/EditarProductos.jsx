@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { editarProducto, obtenerUnProducto } from "../../../helpers/queries";
 import Swal from "sweetalert2";
 
@@ -14,6 +14,7 @@ const EditarProductos = () => {
     setValue,
   } = useForm();
   const { id, nombreProducto } = useParams();
+  const navegacion = useNavigate()
 
   useEffect(() => {
     console.log(id);
@@ -40,6 +41,7 @@ const EditarProductos = () => {
           `El producto ${nuevoProducto.nombreProducto} fue modificado`,
           "success"
         );
+        navegacion("/administrador")
       } else {
         Swal.fire(
           "Ocurrió un error",

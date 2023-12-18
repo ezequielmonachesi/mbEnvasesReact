@@ -13,9 +13,9 @@ export const login = async (usuario) => {
     if (usuarioBuscado) {
       if (usuarioBuscado.password === usuario.password) {
         return usuarioBuscado;
-      }else{
-        console.log("Passowrd Incorrecto")
-        return null
+      } else {
+        console.log("Passowrd Incorrecto");
+        return null;
       }
     } else {
       console.log("El mail no existe");
@@ -66,6 +66,17 @@ export const editarProducto = async (id, producto) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(producto),
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const borrarProducto = async (id) => {
+  try {
+    const respuesta = await fetch(URL_productos + "/" + id, {
+      method: "DELETE",
     });
     return respuesta;
   } catch (error) {

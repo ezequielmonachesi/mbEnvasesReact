@@ -1,8 +1,45 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { borrarProducto, getProductos } from "../../../helpers/queries";
+import Swal from "sweetalert2";
 
-const ItemProductos = ({ producto }) => {
+const ItemProductos = ({ producto, setProductos }) => {
+  const eliminarProducto = () => {
+    Swal.fire({
+      title: "Estás seguro de borrar?",
+      text: "No se puede volver a recuperar el producto",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, borralo!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        borrarProducto(producto.id).then((respuesta) => {
+          if (respuesta && respuesta.status === 200) {
+            Swal.fire({
+              title: "Borrado!",
+              text: "El producto fue eliminado.",
+              icon: "success",
+            });
+            getProductos().then((respuesta) => {
+              if (respuesta) {
+                setProductos(respuesta);
+              }
+            });
+          } else {
+            Swal.fire(
+              "Ocurrio un error",
+              `El producto ${producto.nombreProducto} no pudo ser eliminado`,
+              "error"
+            );
+          }
+        });
+      }
+    });
+  };
+
   return (
     <>
       <tr>
@@ -17,7 +54,10 @@ const ItemProductos = ({ producto }) => {
           >
             Editar
           </Link>
-          <Button className="btn btn-danger mt-2 mt-md-0">Borrar</Button>
+          {/* className="btn btn-danger mt-2 mt-md-0" */}
+          <Button variant="danger" onClick={eliminarProducto}>
+            Borrar
+          </Button>
         </td>
       </tr>
     </>
