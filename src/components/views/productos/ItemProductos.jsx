@@ -20,7 +20,7 @@ const ItemProductos = ({ producto, setProductos }) => {
           if (respuesta && respuesta.status === 200) {
             Swal.fire({
               title: "Borrado!",
-              text: "El producto fue eliminado.",
+              text: `El producto ${producto.nombreProducto} fue eliminado.`,
               icon: "success",
             });
             getProductos().then((respuesta) => {
@@ -29,11 +29,11 @@ const ItemProductos = ({ producto, setProductos }) => {
               }
             });
           } else {
-            Swal.fire(
-              "Ocurrio un error",
-              `El producto ${producto.nombreProducto} no pudo ser eliminado`,
-              "error"
-            );
+            Swal.fire({
+              title: "Ocurrio un error",
+              text: `El producto ${producto.nombreProducto} no pudo ser eliminado`,
+              icon: "error",
+            });
           }
         });
       }

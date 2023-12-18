@@ -163,7 +163,6 @@ const Inicio = () => {
           </Col>
         </Row>
       </Container>
-      {/* Productos */}
     </>
   );
 };
